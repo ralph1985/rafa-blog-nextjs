@@ -21,10 +21,6 @@
           ".tsx"
         ]
       }
-    ],
-    "import/no-extraneous-dependencies": [
-      "error", //
-      { "devDependencies": true }
     ]
   },
   "overrides": [
@@ -37,6 +33,12 @@
         "import/no-extraneous-dependencies": "off",
         "jest/expect-expect": "off",
         "jest/no-export": "off"
+      }
+    },
+    {
+      "files": ["__tests__/*.test.jsx"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
       }
     }
   ]
