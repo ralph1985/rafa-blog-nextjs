@@ -26,6 +26,8 @@
     "typescript": "5.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
     "@netlify/plugin-nextjs": "^4.29.5-appdir.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.8.0",
