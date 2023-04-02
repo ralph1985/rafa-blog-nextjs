@@ -3,6 +3,7 @@
     "airbnb", //
     "eslint:recommended",
     "next/core-web-vitals",
+    "plugin:cypress/recommended",
     "plugin:jest/recommended",
     "prettier"
   ],
@@ -25,5 +26,18 @@
       "error", //
       { "devDependencies": true }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "cypress/**", //
+        "cypress.config.ts"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": "off",
+        "jest/expect-expect": "off",
+        "jest/no-export": "off"
+      }
+    }
+  ]
 }
