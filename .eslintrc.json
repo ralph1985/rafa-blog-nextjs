@@ -12,6 +12,8 @@
   },
   "rules": {
     "import/extensions": "off",
+    "newline-after-var": "error",
+    "newline-before-return": "error",
     "react/jsx-filename-extension": [
       2,
       {
@@ -37,7 +39,10 @@
       }
     },
     {
-      "files": ["__tests__/*.test.jsx"],
+      "files": [
+        "__tests__/*.test.jsx", //
+        "next.config.js"
+      ],
       "rules": {
         "import/no-extraneous-dependencies": "off"
       }
