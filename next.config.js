@@ -4,5 +4,6 @@ const nextConfig = {
     appDir: true,
   },
 };
+const nextTranslate = require('next-translate-plugin');
 
-module.exports = nextConfig;
+module.exports = nextTranslate(nextConfig);
