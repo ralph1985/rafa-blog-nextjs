@@ -18,7 +18,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "yarn test",
+      "pre-push": "yarn test && yarn e2e:headless",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
