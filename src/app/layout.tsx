@@ -1,4 +1,5 @@
-import './globals.scss';
+import 'normalize.css/normalize.css';
+import './layout.scss';
 
 export const metadata = {
   title: 'Create Next App',

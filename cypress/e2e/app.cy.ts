@@ -5,7 +5,7 @@ describe('Navigation', () => {
     cy.visit('http://localhost:3000/');
 
     // The new page should contain an h1 with "About page"
-    cy.get('p').contains('Get started by editing');
+    cy.get('div').contains('Home');
 
     // Find a link with an href attribute containing "about" and click it
     // cy.get('a[href*="about"]').click();

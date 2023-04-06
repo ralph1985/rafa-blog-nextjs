@@ -6,7 +6,7 @@ describe('Home', () => {
   it('renders a text', () => {
     render(<Home />)
 
-    const text = screen.getByText('Get started by editing')
+    const text = screen.getByText('Home')
 
     expect(text).toBeInTheDocument()
   })
