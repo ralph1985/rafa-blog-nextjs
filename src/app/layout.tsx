@@ -1,5 +1,6 @@
 import 'normalize.css/normalize.css';
 import './layout.scss';
+import useTranslation from 'next-translate/useTranslation';
 
 export const metadata = {
   title: 'Create Next App',
@@ -7,8 +8,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const { lang } = useTranslation('home');
+
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body>{children}</body>
     </html>
   );

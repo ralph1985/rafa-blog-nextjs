@@ -6,7 +6,7 @@ describe('Home', () => {
   it('renders a text', () => {
     render(<Home />)
 
-    const text = screen.getByText('Home')
+    const text = screen.getByText('home')
 
     expect(text).toBeInTheDocument()
   })
