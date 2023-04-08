@@ -3,6 +3,7 @@ import './layout.scss';
 
 import useTranslation from 'next-translate/useTranslation';
 import NavBar from './navbar';
+import Header from './header';
 import Footer from './footer';
 
 export const metadata = {
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang={lang}>
       <body>
         <NavBar />
+        <Header />
         {children}
         <Footer />
       </body>
