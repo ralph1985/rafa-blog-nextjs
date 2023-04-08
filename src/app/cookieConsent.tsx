@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 
-function CookieConsent() {
+export default function CookieConsent() {
   const { t } = useTranslation('common');
   const [consentGiven, setConsentGiven] = useState<boolean>(false);
 
@@ -33,5 +33,3 @@ function CookieConsent() {
     </div>
   );
 }
-
-export default CookieConsent;
