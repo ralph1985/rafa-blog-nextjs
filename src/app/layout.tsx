@@ -3,6 +3,7 @@ import './layout.scss';
 
 import useTranslation from 'next-translate/useTranslation';
 import NavBar from './navbar';
+import CookieConsent from './cookieConsent';
 
 export const metadata = {
   title: 'Create Next App',
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <NavBar />
         {children}
+        <CookieConsent />
       </body>
     </html>
   );
