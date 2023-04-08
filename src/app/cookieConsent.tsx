@@ -21,14 +21,16 @@ function CookieConsent() {
   };
 
   return (
-    !consentGiven && (
-      <div className="cookiesConsent" data-testid="cookiesConsent">
-        <p>{t('cookiesConsent')}</p>
-        <button type="button" onClick={handleAccept}>
-          {t('accept')}
-        </button>
-      </div>
-    )
+    <div>
+      {!consentGiven && (
+        <div className="cookiesConsent" data-testid="cookiesConsent">
+          <p>{t('cookiesConsent')}</p>
+          <button type="button" onClick={handleAccept}>
+            {t('accept')}
+          </button>
+        </div>
+      )}
+    </div>
   );
 }
 
