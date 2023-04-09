@@ -4,19 +4,9 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { locales } from '../../../i18n';
 import styles from './navbar.module.scss';
-
-// TODO: sacar esta función a "utils"
-function joinArray<T, S>(array: Array<T>, separator: S): Array<T | S> {
-  return array.reduce<(T | S)[]>((p, c, idx) => {
-    if (idx === 0) {
-      return [c];
-    }
-
-    return [...p, separator, c];
-  }, []);
-}
 
 type NavItem = {
   label: string;
@@ -61,13 +51,13 @@ export default function NavBar() {
           </li>
         ))}
         <li>
-          {joinArray(
-            locales.map((locale) => (
-              <a key={locale} href={`/${locale}`.concat(pathnameWithoutLang)}>
-                {locale.toLocaleUpperCase()}
-              </a>
-            )),
-            '/'
+          {locales.map(
+            (locale) =>
+              lang !== locale && (
+                <a key={locale} href={`/${locale}`.concat(pathnameWithoutLang)}>
+                  <Image src={`flags/${locale}.svg`} alt={t(`flag-${locale}`)} width={25} height={25} />
+                </a>
+              )
           )}
         </li>
       </ul>
