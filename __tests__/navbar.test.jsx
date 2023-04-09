@@ -52,3 +52,5 @@ Object.entries(navItems).forEach(([lang, { home, about }]) => {
     });
   });
 });
+
+// TODO: hacer los tests unitarios del cambio de idioma
