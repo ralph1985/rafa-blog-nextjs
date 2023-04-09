@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import useTranslation from 'next-translate/useTranslation';
 import NavBar from '../../src/app/navbar/navbar';
 
@@ -49,6 +49,18 @@ Object.entries(navItems).forEach(([lang, { home, about }]) => {
 
       expect(homeLink.getAttribute('href')).toBe(home.href);
       expect(aboutLink.getAttribute('href')).toBe(about.href);
+    });
+
+    test('should toggle visibility of menu items when toggle button is clicked', () => {
+      render(<NavBar />);
+
+      fireEvent.click(screen.getByText('Toggle Menu'));
+
+      expect(screen.getByRole('navigation')).toHaveClass('open');
+
+      fireEvent.click(screen.getByText('Toggle Menu'));
+
+      expect(screen.getByRole('navigation')).not.toHaveClass('open');
     });
   });
 });
