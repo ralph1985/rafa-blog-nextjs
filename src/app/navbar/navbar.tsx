@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
@@ -23,6 +24,10 @@ type NavItem = {
 };
 
 export default function NavBar() {
+  const [isVisible, setIsVisible] = useState(false);
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
   const { t, lang } = useTranslation('navbar');
   let pathname = usePathname();
 
@@ -44,7 +49,10 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} ${isVisible ? styles.open : ''}`}>
+      <button type="button" className={styles.button} onClick={toggleVisibility}>
+        Toggle Menu
+      </button>
       <ul>
         {defaultItems.map((item) => (
           <li key={item.href}>
