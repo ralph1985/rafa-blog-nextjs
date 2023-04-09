@@ -1,5 +1,5 @@
 import useTranslation from 'next-translate/useTranslation';
-import CookieConsent from './cookieConsent';
+import CookieConsent from './cookie-consent/cookie-consent';
 import styles from './footer.module.scss';
 
 export default function Footer() {

@@ -1,7 +1,7 @@
 import useTranslation from 'next-translate/useTranslation';
-import NavBar from './navbar';
-import Header from './header';
-import Footer from './footer';
+import NavBar from './navbar/navbar';
+import Header from './header/header';
+import Footer from './footer/footer';
 
 import 'normalize.css/normalize.css';
 import './layout.scss';

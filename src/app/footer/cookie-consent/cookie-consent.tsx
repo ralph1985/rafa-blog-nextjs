@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import styles from './navbar.module.scss';
+import styles from './cookie-consent.module.scss';
 
 export default function CookieConsent() {
   const { t } = useTranslation('common');

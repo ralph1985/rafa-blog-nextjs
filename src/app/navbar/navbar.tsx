@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
-import { locales } from '../../i18n';
+import { locales } from '../../../i18n';
 import styles from './navbar.module.scss';
 
 // TODO: sacar esta función a "utils"
