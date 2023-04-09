@@ -9,9 +9,11 @@ const middleware = (request: NextRequest) => {
   if (!regex.test(request.nextUrl.href)) {
     request.nextUrl.searchParams.set('lang', locale);
     request.nextUrl.href = request.nextUrl.href.replace(`/${locale}`, '');
+
+    return NextResponse.rewrite(request.nextUrl);
   }
 
-  return NextResponse.rewrite(request.nextUrl);
+  return NextResponse.next();
 };
 
 export default middleware;
