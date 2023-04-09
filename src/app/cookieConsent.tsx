@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import useTranslation from 'next-translate/useTranslation';
+import styles from './navbar.module.scss';
 
 export default function CookieConsent() {
   const { t } = useTranslation('common');
@@ -23,8 +24,8 @@ export default function CookieConsent() {
   return (
     <div>
       {!consentGiven && (
-        <div className="cookiesConsent" data-testid="cookiesConsent">
-          <p>{t('cookiesConsent')}</p>
+        <div className={styles.cookieConsent} data-testid="cookieConsent">
+          <p>{t('cookieConsent')}</p>
           <button type="button" onClick={handleAccept}>
             {t('accept')}
           </button>

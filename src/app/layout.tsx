@@ -1,10 +1,10 @@
-import 'normalize.css/normalize.css';
-import './layout.scss';
-
 import useTranslation from 'next-translate/useTranslation';
 import NavBar from './navbar';
 import Header from './header';
 import Footer from './footer';
+
+import 'normalize.css/normalize.css';
+import './layout.scss';
 
 export const metadata = {
   title: 'Create Next App',
@@ -17,9 +17,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang={lang}>
       <body>
-        <NavBar />
         <Header />
-        {children}
+        <div className="container">
+          <NavBar />
+          <main>{children}</main>
+        </div>
         <Footer />
       </body>
     </html>

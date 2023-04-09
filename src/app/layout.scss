@@ -6,3 +6,34 @@
 @use './scss/base/base';
 
 // TODO: eslint SASS
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+}
+
+main {
+  flex-grow: 1;
+}
+
+:root {
+  --primary-color: #64ff00;
+}
+
+@media (min-width: variables.$mobile-screen) {
+  :root {
+    --primary-color: blue;
+  }
+}
+
+@media (min-width: variables.$desktop-screen) {
+  :root {
+    --primary-color: pink;
+  }
+}

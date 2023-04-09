@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
 import { locales } from '../../i18n';
+import styles from './navbar.module.scss';
 
 // TODO: sacar esta función a "utils"
 function joinArray<T, S>(array: Array<T>, separator: S): Array<T | S> {
@@ -43,7 +44,7 @@ export default function NavBar() {
   ];
 
   return (
-    <nav>
+    <nav className={styles.navbar}>
       <ul>
         {defaultItems.map((item) => (
           <li key={item.href}>

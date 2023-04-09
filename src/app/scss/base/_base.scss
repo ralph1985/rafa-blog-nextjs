@@ -1,13 +1,7 @@
-$primary-color: #64ff00;
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,400;1,400&display=swap');
 
 html,
 body {
-  font-family: var(--font-source-code-pro);
-  background-color: $primary-color;
-}
-
-.cookiesConsent {
-  background-color: red;
-  position: fixed;
-  bottom: 0;
+  font-family: 'Source Code Pro', monospace;
+  background-color: var(--primary-color);
 }

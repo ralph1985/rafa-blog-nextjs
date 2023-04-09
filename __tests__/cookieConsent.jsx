@@ -9,7 +9,7 @@ describe('CookieConsent', () => {
   it('should render CookieConsent', () => {
     render(<CookieConsent />);
 
-    const cookieConsent = screen.getByTestId('cookiesConsent');
+    const cookieConsent = screen.getByTestId('cookieConsent');
 
     expect(cookieConsent).toBeInTheDocument();
   });
@@ -29,7 +29,7 @@ describe('CookieConsent', () => {
   it('should show CookieConsent if no consent has been given', () => {
     render(<CookieConsent />);
 
-    const cookieConsent = screen.getByTestId('cookiesConsent');
+    const cookieConsent = screen.getByTestId('cookieConsent');
 
     expect(cookieConsent).toBeInTheDocument();
   });
@@ -42,7 +42,7 @@ describe('CookieConsent', () => {
     let thereIsACookieLayer;
 
     try {
-      screen.getByTestId('cookiesConsent');
+      screen.getByTestId('cookieConsent');
       thereIsACookieLayer = true;
     } catch {
       // Noop
