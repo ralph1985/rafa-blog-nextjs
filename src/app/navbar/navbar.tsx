@@ -55,7 +55,7 @@ export default function NavBar() {
             (locale) =>
               lang !== locale && (
                 <a key={locale} href={`/${locale}`.concat(pathnameWithoutLang)}>
-                  <Image src={`flags/${locale}.svg`} alt={t(`flag-${locale}`)} width={25} height={25} />
+                  <Image src={`/flags/${locale}.svg`} alt={t(`flag-${locale}`)} width={25} height={25} />
                 </a>
               )
           )}
