@@ -1,6 +1,6 @@
-// @use './scss/abstracts/variables';
+@use '../scss/abstracts/variables';
 
-.navbar {
+.style {
   background-color: honeydew;
   position: absolute;
   height: 100vh;
@@ -18,4 +18,12 @@
 .button {
   position: relative;
   right: -12em;
+}
+
+@media (min-width: variables.$mobile-screen) {
+  .style {
+    position: inherit;
+    margin-left: initial;
+    height: inherit;
+  }
 }

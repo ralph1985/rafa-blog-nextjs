@@ -28,6 +28,7 @@ export default function NavBar() {
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
   };
+
   const { t, lang } = useTranslation('navbar');
   let pathname = usePathname();
 
@@ -49,7 +50,7 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className={`${styles.navbar} ${isVisible ? styles.open : ''}`}>
+    <nav className={`${styles.style} ${isVisible ? styles.open : ''}`}>
       <button type="button" className={styles.button} onClick={toggleVisibility}>
         Toggle Menu
       </button>
