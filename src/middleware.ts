@@ -4,9 +4,12 @@ import i18n from '../i18n';
 
 const middleware = (request: NextRequest) => {
   const locale = request.nextUrl.locale || i18n.defaultLocale;
+  const regex = /\w+\.(svg|jpg|png)$/i;
 
-  request.nextUrl.searchParams.set('lang', locale);
-  request.nextUrl.href = request.nextUrl.href.replace(`/${locale}`, '');
+  if (!regex.test(request.nextUrl.href)) {
+    request.nextUrl.searchParams.set('lang', locale);
+    request.nextUrl.href = request.nextUrl.href.replace(`/${locale}`, '');
+  }
 
   return NextResponse.rewrite(request.nextUrl);
 };
