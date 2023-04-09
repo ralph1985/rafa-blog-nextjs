@@ -7,7 +7,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.style}>
       <div data-testid="footer">
         &copy;
         {year} Rafael García Prieto. {t('allRightsReserved')}

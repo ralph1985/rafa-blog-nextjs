@@ -24,7 +24,7 @@ export default function CookieConsent() {
   return (
     <div>
       {!consentGiven && (
-        <div className={styles.cookieConsent} data-testid="cookieConsent">
+        <div className={styles.style} data-testid="cookieConsent">
           <p>{t('cookieConsent')}</p>
           <button type="button" onClick={handleAccept}>
             {t('accept')}
