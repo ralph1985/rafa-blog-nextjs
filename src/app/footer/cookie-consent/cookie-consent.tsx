@@ -24,13 +24,14 @@ export default function CookieConsent() {
   };
 
   return (
-    !consentGiven && (
+    (!consentGiven && (
       <div className={styles.style} data-testid="cookieConsent">
         <p>{t('cookieConsent')}</p>
         <button type="button" onClick={handleAccept}>
           {t('accept')}
         </button>
       </div>
-    )
+    )) ||
+    null
   );
 }
