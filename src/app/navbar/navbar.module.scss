@@ -1,7 +1,7 @@
 @use '../scss/abstracts/variables';
 
-.style {
-  background-color: honeydew;
+.base {
+  background-color: black;
   position: absolute;
   height: 100vh;
   width: 12em;
@@ -15,19 +15,19 @@
   transition: opacity 0.5s, margin-left 0.5s ease-in-out;
 }
 
-.button {
-  position: relative;
-  right: -12em;
+.hamburger {
+  position: fixed;
+  left: 0;
 }
 
 @media (min-width: variables.$mobile-screen) {
-  .style {
+  .base {
     position: inherit;
     margin-left: initial;
     height: inherit;
   }
 
-  .button {
+  .hamburger {
     display: none;
   }
 }

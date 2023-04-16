@@ -1,0 +1,73 @@
+$length: 24;
+$total-length: 111.22813415527344;
+$offset: -38;
+
+.checkbox {
+  display: none;
+}
+
+.base {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  max-width: 4em;
+  max-height: 4em;
+
+  &:hover {
+    .circle {
+      opacity: 1;
+    }
+  }
+}
+
+.circle {
+  fill: #fff3;
+  opacity: 0;
+}
+
+.path {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  --length: #{$length};
+  --offset: #{$offset};
+  stroke-dasharray: var(--length) var(--total-length);
+  stroke-dashoffset: var(--offset);
+  transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.cross input:checked+svg .line1,
+.cross input:checked+svg .line3 {
+  --length: 22.627416998;
+}
+
+.cross input:checked+svg .line2 {
+  --length: 0;
+}
+
+.menu2 .line1,
+.menu2 .line3 {
+  --total-length: #{$total-length};
+  --offset: -50.22813415527344;
+}
+
+.menu2 .line2 {
+  --total-length: 99;
+}
+
+.menu2 input:checked+svg .path {
+  transform: translateX(30px);
+}
+
+.menu2 input:checked+svg .line1,
+.menu2 input:checked+svg .line3 {
+  --offset: -16.9705627485;
+}
+
+.menu2 input:checked+svg .line2 {
+  --offset: -20;
+}

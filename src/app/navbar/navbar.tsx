@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
 import Image from 'next/image';
+import Hamburger from './hamburger';
 import { locales } from '../../../i18n';
 import styles from './navbar.module.scss';
 
@@ -40,10 +41,8 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className={`${styles.style} ${isVisible ? styles.open : ''}`}>
-      <button type="button" className={styles.button} onClick={toggleVisibility}>
-        Toggle Menu
-      </button>
+    <nav className={`${styles.base} ${isVisible ? styles.open : ''}`}>
+      <Hamburger className={styles.hamburger} onChange={toggleVisibility} />
       <ul>
         {defaultItems.map((item) => (
           <li key={item.href}>
