@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Header from '../../src/app/header/header';
+import Header from './header';
 
 describe('Header', () => {
   it('renders a text', () => {

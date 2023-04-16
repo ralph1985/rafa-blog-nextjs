@@ -40,7 +40,7 @@
     },
     {
       "files": [
-        "__tests__/**/*.test.jsx", //
+        "**/*.test.jsx", //
         "next.config.js"
       ],
       "rules": {
