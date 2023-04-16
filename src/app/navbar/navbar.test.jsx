@@ -54,11 +54,11 @@ Object.entries(navItems).forEach(([lang, { home, about }]) => {
     test('should toggle visibility of menu items when toggle button is clicked', () => {
       render(<NavBar />);
 
-      fireEvent.click(screen.getByText('Toggle Menu'));
+      fireEvent.click(screen.getByTestId('hamburger'));
 
       expect(screen.getByRole('navigation')).toHaveClass('open');
 
-      fireEvent.click(screen.getByText('Toggle Menu'));
+      fireEvent.click(screen.getByTestId('hamburger'));
 
       expect(screen.getByRole('navigation')).not.toHaveClass('open');
     });
