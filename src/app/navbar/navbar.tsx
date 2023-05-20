@@ -42,7 +42,7 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className={`${styles.base} ${isVisible ? styles.open : ''}`}>
+      <nav className={`${styles.navbar} ${isVisible ? styles.open : ''}`}>
         <ul>
           {defaultItems.map((item) => (
             <li key={item.href}>

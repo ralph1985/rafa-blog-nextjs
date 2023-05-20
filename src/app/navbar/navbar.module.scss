@@ -1,6 +1,6 @@
 @use '../scss/abstracts/variables';
 
-.base {
+.navbar {
   animation: menu-out variables.$menu-animation-duration;
   background-color: black;
   height: 100vh;
@@ -31,7 +31,7 @@
 }
 
 @media (min-width: variables.$mobile-screen) {
-  .base {
+  .navbar {
     animation: none;
     height: inherit;
     position: inherit;
