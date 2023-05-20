@@ -1,19 +1,19 @@
 @use '../scss/abstracts/variables';
 
 .base {
+  animation: menu-out variables.$menu-animation-duration;
   background-color: black;
-  position: absolute;
   height: 100vh;
-  width: 12em;
-  translate: -100% 0;
+  position: absolute;
   top: 0;
   transition: translate variables.$menu-animation-duration cubic-bezier(0.175, 0.885, 0.32, 1);
-  animation: menu-out variables.$menu-animation-duration;
+  translate: -100% 0;
+  width: 12em;
 
   &.open {
-    translate: 0;
-    transition: translate variables.$menu-animation-duration cubic-bezier(0.175, 0.885, 0.32, 1);
     animation: menu-in variables.$menu-animation-duration;
+    transition: translate variables.$menu-animation-duration cubic-bezier(0.175, 0.885, 0.32, 1);
+    translate: 0;
   }
 }
 
@@ -32,10 +32,10 @@
 
 @media (min-width: variables.$mobile-screen) {
   .base {
+    animation: none;
+    height: inherit;
     position: inherit;
     translate: 0;
-    height: inherit;
-    animation: none;
   }
 
   .hamburger {
