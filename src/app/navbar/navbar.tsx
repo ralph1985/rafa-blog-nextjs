@@ -43,23 +43,21 @@ export default function NavBar() {
   return (
     <>
       <nav className={`${styles.navbar} ${isVisible ? styles.open : ''}`}>
-        <ul>
+        <div>
           {defaultItems.map((item) => (
-            <li key={item.href}>
-              <Link href={item.href}>{item.label}</Link>
-            </li>
+            <Link key={item.href} href={item.href} onClick={toggleVisibility}>
+              {item.label}
+            </Link>
           ))}
-          <li>
-            {locales.map(
-              (locale) =>
-                lang !== locale && (
-                  <a key={locale} href={`/${locale}`.concat(pathnameWithoutLang)}>
-                    <Image src={`/flags/${locale}.svg`} alt={t(`flag-${locale}`)} width={25} height={25} />
-                  </a>
-                )
-            )}
-          </li>
-        </ul>
+          {locales.map(
+            (locale) =>
+              lang !== locale && (
+                <a key={locale} href={`/${locale}`.concat(pathnameWithoutLang)}>
+                  <Image src={`/flags/${locale}.svg`} alt={t(`flag-${locale}`)} width={25} height={25} />
+                </a>
+              )
+          )}
+        </div>
       </nav>
       <Hamburger className={styles.hamburger} onChange={toggleVisibility} />
       {isVisible && (
