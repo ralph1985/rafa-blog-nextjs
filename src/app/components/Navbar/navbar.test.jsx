@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import useTranslation from 'next-translate/useTranslation';
-import NavBar from './navbar';
+import NavBar from './NavBar';
 
 jest.mock('next-translate/useTranslation', () => ({
   __esModule: true,
@@ -33,7 +33,7 @@ const navItems = {
 Object.entries(navItems).forEach(([lang, { home, about }]) => {
   describe(`NavBar component for ${lang}`, () => {
     beforeEach(() => {
-      const translations = require(`../../../locales/${lang}/navbar.json`);
+      const translations = require(`../../../../locales/${lang}/navbar.json`);
 
       useTranslation.mockReturnValue({
         t: (key) => translations[key],

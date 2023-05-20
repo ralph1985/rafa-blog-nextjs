@@ -5,8 +5,8 @@ import { usePathname } from 'next/navigation';
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
 import Image from 'next/image';
-import Hamburger from './hamburger';
-import { locales } from '../../../i18n';
+import Hamburger from '../Buttons/Hamburger/Hamburger';
+import { locales } from '../../../../i18n';
 import styles from './navbar.module.scss';
 
 type NavItem = {

@@ -49,5 +49,10 @@
         "import/no-dynamic-require": "off"
       }
     }
-  ]
+  ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
 }

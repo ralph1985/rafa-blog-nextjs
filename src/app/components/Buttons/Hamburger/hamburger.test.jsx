@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import Hamburger from './hamburger';
+import Hamburger from './Hamburger';
 
 describe('Hamburger Component', () => {
   test('renders correctly', () => {
