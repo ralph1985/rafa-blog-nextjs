@@ -9,16 +9,25 @@
   top: 0;
   transition: translate variables.$menu-animation-duration cubic-bezier(0.175, 0.885, 0.32, 1);
   animation: menu-out variables.$menu-animation-duration;
-}
 
-.open {
-  translate: 0;
-  transition: translate variables.$menu-animation-duration cubic-bezier(0.175, 0.885, 0.32, 1);
-  animation: menu-in variables.$menu-animation-duration;
+  &.open {
+    translate: 0;
+    transition: translate variables.$menu-animation-duration cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation: menu-in variables.$menu-animation-duration;
+  }
 }
 
 .hamburger {
   position: fixed;
+}
+
+.secondaryCloseNavBarButton {
+  height: 100vh;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: calc(100% - 12em);
 }
 
 @media (min-width: variables.$mobile-screen) {
@@ -30,6 +39,10 @@
   }
 
   .hamburger {
+    display: none;
+  }
+
+  .secondaryCloseNavBarButton {
     display: none;
   }
 }

@@ -62,6 +62,11 @@ export default function NavBar() {
         </ul>
       </nav>
       <Hamburger className={styles.hamburger} onChange={toggleVisibility} />
+      {isVisible && (
+        <button type="button" className={styles.secondaryCloseNavBarButton} onClick={toggleVisibility}>
+          {t('menu-close')}
+        </button>
+      )}
     </>
   );
 }
