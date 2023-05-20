@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import CookieConsent from './cookie-consent';
+import CookieConsent from './CookieConsent';
 
 describe('CookieConsent', () => {
   afterEach(() => {

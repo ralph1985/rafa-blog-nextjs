@@ -1,6 +1,6 @@
 import useTranslation from 'next-translate/useTranslation';
-import CookieConsent from './cookie-consent/cookie-consent';
-import styles from './footer.module.scss';
+import CookieConsent from '../CookieConsent/CookieConsent';
+import styles from './Footer.module.scss';
 
 export default function Footer() {
   const { t } = useTranslation('common');

@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Hamburger from '../Buttons/Hamburger/Hamburger';
 import { locales } from '../../../../i18n';
-import styles from './navbar.module.scss';
+import styles from './NavBar.module.scss';
 
 type NavItem = {
   label: string;
