@@ -5,29 +5,51 @@
   position: absolute;
   height: 100vh;
   width: 12em;
-  margin-left: -12em;
+  translate: -100% 0;
   top: 0;
-  transition: opacity 0.5s, margin-left 0.5s ease-in-out;
+  transition: translate variables.$menu-animation-duration cubic-bezier(0.175, 0.885, 0.32, 1);
+  animation: menu-out variables.$menu-animation-duration;
 }
 
 .open {
-  margin-left: 0;
-  transition: opacity 0.5s, margin-left 0.5s ease-in-out;
+  translate: 0;
+  transition: translate variables.$menu-animation-duration cubic-bezier(0.175, 0.885, 0.32, 1);
+  animation: menu-in variables.$menu-animation-duration;
 }
 
 .hamburger {
   position: fixed;
-  left: 0;
 }
 
 @media (min-width: variables.$mobile-screen) {
   .base {
     position: inherit;
-    margin-left: initial;
+    translate: 0;
     height: inherit;
+    animation: none;
   }
 
   .hamburger {
     display: none;
+  }
+}
+
+@keyframes menu-in {
+  0% {
+    clip-path: ellipse(60% 60% at 0% 50%);
+  }
+
+  100% {
+    clip-path: ellipse(120% 120% at 0% 50%);
+  }
+}
+
+@keyframes menu-out {
+  0% {
+    clip-path: ellipse(120% 120% at 0% 50%);
+  }
+
+  100% {
+    clip-path: ellipse(0% 0% at 0% 50%);
   }
 }

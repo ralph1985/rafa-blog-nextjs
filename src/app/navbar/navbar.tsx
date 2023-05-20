@@ -41,25 +41,27 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className={`${styles.base} ${isVisible ? styles.open : ''}`}>
-      <Hamburger className={styles.hamburger} onChange={toggleVisibility} />
-      <ul>
-        {defaultItems.map((item) => (
-          <li key={item.href}>
-            <Link href={item.href}>{item.label}</Link>
+    <>
+      <nav className={`${styles.base} ${isVisible ? styles.open : ''}`}>
+        <ul>
+          {defaultItems.map((item) => (
+            <li key={item.href}>
+              <Link href={item.href}>{item.label}</Link>
+            </li>
+          ))}
+          <li>
+            {locales.map(
+              (locale) =>
+                lang !== locale && (
+                  <a key={locale} href={`/${locale}`.concat(pathnameWithoutLang)}>
+                    <Image src={`/flags/${locale}.svg`} alt={t(`flag-${locale}`)} width={25} height={25} />
+                  </a>
+                )
+            )}
           </li>
-        ))}
-        <li>
-          {locales.map(
-            (locale) =>
-              lang !== locale && (
-                <a key={locale} href={`/${locale}`.concat(pathnameWithoutLang)}>
-                  <Image src={`/flags/${locale}.svg`} alt={t(`flag-${locale}`)} width={25} height={25} />
-                </a>
-              )
-          )}
-        </li>
-      </ul>
-    </nav>
+        </ul>
+      </nav>
+      <Hamburger className={styles.hamburger} onChange={toggleVisibility} />
+    </>
   );
 }
