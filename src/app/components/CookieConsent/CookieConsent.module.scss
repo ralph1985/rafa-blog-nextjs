@@ -1,5 +1,29 @@
-.style {
+@use 'scss/abstracts/variables';
+
+.banner {
+  animation: appear variables.$cookies-animation-duration backwards;
   background-color: red;
-  position: fixed;
   bottom: 0;
+  position: fixed;
+
+  p {
+    margin: 2em 1em;
+  }
+
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: .3;
+    translate: 0 2em;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
