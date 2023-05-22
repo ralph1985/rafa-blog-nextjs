@@ -1,8 +1,16 @@
 @use 'scss/abstracts/variables';
 
+.navbar[data-theme="dark"] {
+  background-color: variables.$background-primary-color-dark;
+
+  a {
+    color: variables.$font-primary-color-dark
+  }
+}
+
 .navbar {
   animation: menu-out variables.$menu-animation-duration;
-  background-color: black;
+  background-color: variables.$background-primary-color-light;
   height: 100vh;
   position: absolute;
   top: 0;
@@ -35,7 +43,7 @@
 
     a {
       position: relative;
-      color: #f9f9f9;
+      color: variables.$font-primary-color-light;
       text-decoration: none;
       font-size: 1em;
       padding: .6em 0;

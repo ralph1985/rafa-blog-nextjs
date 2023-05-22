@@ -2,6 +2,7 @@ import useTranslation from 'next-translate/useTranslation';
 import NavBar from 'components/Navbar/NavBar';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
+import { ThemeContextProvider } from 'context/ThemeContext';
 
 import 'normalize.css/normalize.css';
 import './layout.scss';
@@ -17,12 +18,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang={lang}>
       <body>
-        <Header />
-        <div className="container">
-          <NavBar />
-          <main>{children}</main>
-        </div>
-        <Footer />
+        <ThemeContextProvider>
+          <Header />
+          <div className="container">
+            <NavBar />
+            <main>{children}</main>
+          </div>
+          <Footer />
+        </ThemeContextProvider>
       </body>
     </html>
   );
