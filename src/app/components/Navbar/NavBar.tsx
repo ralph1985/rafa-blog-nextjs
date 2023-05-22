@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useThemeContext } from 'context/ThemeContext';
+import { useThemeContext } from '../../context/ThemeContext'; // TODO: arreglar el tener que poner "../../" para que los tests de Jest pasen
 import Hamburger from '../Buttons/Hamburger/Hamburger';
 import { locales } from '../../../../i18n';
 import styles from './NavBar.module.scss';
