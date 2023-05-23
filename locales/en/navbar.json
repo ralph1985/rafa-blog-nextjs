@@ -1,8 +1,9 @@
 {
-  "home": "Home",
   "about": "About me",
-  "flag-es": "Spanish flag",
+  "contact": "Contact",
   "flag-en": "England flag",
-  "menu-open": "Open menu",
-  "menu-close": "Close menu"
+  "flag-es": "Spanish flag",
+  "home": "Home",
+  "menu-close": "Close menu",
+  "menu-open": "Open menu"
 }

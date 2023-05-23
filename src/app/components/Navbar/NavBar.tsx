@@ -41,6 +41,10 @@ export default function NavBar() {
       label: t('about'),
       href: `${baseLang}/about`,
     },
+    {
+      label: t('contact'),
+      href: `${baseLang}/contact`,
+    },
   ];
 
   return (

@@ -1,8 +1,9 @@
 {
-  "home": "Inicio",
   "about": "Acerca de mi",
-  "flag-es": "Bandera España",
+  "contact": "Contacto",
   "flag-en": "Bandera Inglaterra",
-  "menu-open": "Abrir menú",
-  "menu-close": "Cerrar menú"
+  "flag-es": "Bandera España",
+  "home": "Inicio",
+  "menu-close": "Cerrar menú",
+  "menu-open": "Abrir menú"
 }
