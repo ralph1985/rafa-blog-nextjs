@@ -1,6 +1,6 @@
 @use 'scss/abstracts/variables';
 
-body[data-theme="dark"] {
+[data-theme="dark"] {
   .banner {
     background-color: variables.$background-secondary-color-dark-transparent;
     color: variables.$font-primary-color-light;

@@ -23,7 +23,9 @@ export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
 
   return (
     <ThemeContext.Provider value={contextValue}>
-      <body data-theme={theme}>{children}</body>
+      <div id="body" data-theme={theme}>
+        {children}
+      </div>
     </ThemeContext.Provider>
   );
 }

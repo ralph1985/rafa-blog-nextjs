@@ -9,7 +9,7 @@ $offset: -38;
   display: none;
 }
 
-body[data-theme="light"] {
+[data-theme="light"] {
   .label svg path {
     stroke: variables.$font-primary-color-dark
   }

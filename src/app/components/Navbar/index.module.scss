@@ -1,6 +1,6 @@
 @use 'scss/abstracts/variables';
 
-body[data-theme="dark"] {
+[data-theme="dark"] {
   .navbar {
     background-color: variables.$background-primary-color-dark-transparent;
 
