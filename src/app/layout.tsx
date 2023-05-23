@@ -17,16 +17,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang={lang}>
-      <body>
-        <ThemeContextProvider>
-          <Header />
-          <div className="container">
-            <NavBar />
-            <main>{children}</main>
-          </div>
-          <Footer />
-        </ThemeContextProvider>
-      </body>
+      <ThemeContextProvider>
+        <Header />
+        <div className="container">
+          <NavBar />
+          <main>{children}</main>
+        </div>
+        <Footer />
+      </ThemeContextProvider>
     </html>
   );
 }

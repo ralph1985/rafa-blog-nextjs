@@ -1,10 +1,12 @@
 @use 'scss/abstracts/variables';
 
-.navbar[data-theme="dark"] {
-  background-color: variables.$background-primary-color-dark;
+body[data-theme="dark"] {
+  .navbar {
+    background-color: variables.$background-primary-color-dark;
 
-  a {
-    color: variables.$font-primary-color-dark
+    a {
+      color: variables.$font-primary-color-light
+    }
   }
 }
 
@@ -43,7 +45,7 @@
 
     a {
       position: relative;
-      color: variables.$font-primary-color-light;
+      color: variables.$font-primary-color-dark;
       text-decoration: none;
       font-size: 1em;
       padding: .6em 0;

@@ -19,7 +19,7 @@ export default function Hamburger(props: HamburgerProps) {
 
   return (
     <div className={`${className} ${styles.cross} ${styles.menu2}`}>
-      <label className={styles.base} htmlFor="checkbox-hamburger" data-testid="hamburger">
+      <label className={styles.label} htmlFor="checkbox-hamburger" data-testid="hamburger">
         <input type="checkbox" id="checkbox-hamburger" className={styles.checkbox} checked={isChecked} onChange={handleCheckboxChange} />
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <circle className={styles.circle} cx="50" cy="50" r="30" />

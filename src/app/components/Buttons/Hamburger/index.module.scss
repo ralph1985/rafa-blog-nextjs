@@ -1,3 +1,5 @@
+@use 'scss/abstracts/variables';
+
 $length: 24;
 $total-length: 111.22813415527344;
 $offset: -38;
@@ -7,7 +9,13 @@ $offset: -38;
   display: none;
 }
 
-.base {
+body[data-theme="light"] {
+  .label svg path {
+    stroke: variables.$font-primary-color-dark
+  }
+}
+
+.label {
   display: block;
   cursor: pointer;
   position: absolute;

@@ -21,7 +21,11 @@ export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
 
   const contextValue = useMemo(() => ({ theme, setTheme }), [theme, setTheme]);
 
-  return <ThemeContext.Provider value={contextValue}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={contextValue}>
+      <body data-theme={theme}>{children}</body>
+    </ThemeContext.Provider>
+  );
 }
 
 export const useThemeContext = () => useContext(ThemeContext);

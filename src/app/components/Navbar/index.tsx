@@ -44,7 +44,7 @@ export default function NavBar() {
 
   return (
     <>
-      <nav data-theme={theme} className={`${styles.navbar} ${isVisible ? styles.open : ''}`}>
+      <nav className={`${styles.navbar} ${isVisible ? styles.open : ''}`}>
         <div>
           {defaultItems.map((item) => (
             <Link key={item.href} href={item.href} onClick={toggleVisibility}>
