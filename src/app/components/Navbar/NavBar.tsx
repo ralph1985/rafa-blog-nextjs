@@ -5,8 +5,9 @@ import { usePathname } from 'next/navigation';
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FormControlLabel, MaterialUISwitch } from '../MaterialUI/MaterialUISwitch';
 import { useThemeContext } from '../../context/ThemeContext'; // TODO: arreglar el tener que poner "../../" para que los tests de Jest pasen
-import Hamburger from '../Buttons/Hamburger/Hamburger';
+import Hamburger from '../Buttons/Hamburger/Hamburger'; // TODO: poner el "index" en los componentes para evitar repetir el nombre
 import { locales } from '../../../../i18n';
 import styles from './NavBar.module.scss';
 
@@ -47,6 +48,10 @@ export default function NavBar() {
     },
   ];
 
+  const handleChangeTheme = (event: React.SyntheticEvent, checked: boolean) => {
+    setTheme(checked ? 'dark' : 'light');
+  };
+
   return (
     <>
       <nav data-theme={theme} className={`${styles.navbar} ${isVisible ? styles.open : ''}`}>
@@ -65,9 +70,7 @@ export default function NavBar() {
               )
           )}
         </div>
-        <button type="button" onClick={() => (theme === 'light' ? setTheme('dark') : setTheme('light'))}>
-          {theme === 'light' ? 'change to dark' : 'change to light'}
-        </button>
+        <FormControlLabel control={<MaterialUISwitch sx={{ m: 1 }} checked={theme !== 'light'} />} label="" onChange={handleChangeTheme} />
       </nav>
       <Hamburger className={styles.hamburger} onChange={toggleVisibility} />
       {isVisible && (
