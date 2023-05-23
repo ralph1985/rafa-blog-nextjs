@@ -1,8 +1,16 @@
 'use client';
 
-import { createContext, useContext, useState, ReactNode, useMemo } from 'react';
+import { createContext, useContext, useState, ReactNode, useMemo, Dispatch, SetStateAction } from 'react';
 
-const ThemeContext = createContext({});
+type Theme = {
+  theme: string;
+  setTheme: Dispatch<SetStateAction<string>>;
+};
+
+const ThemeContext = createContext<Theme>({
+  theme: '',
+  setTheme: () => {},
+});
 
 type ThemeContextProviderProps = {
   children: ReactNode;
