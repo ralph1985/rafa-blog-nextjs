@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import useTranslation from 'next-translate/useTranslation';
+import Button from '@mui/material/Button';
 import styles from './index.module.scss';
 
 export default function CookieConsent() {
@@ -27,9 +28,9 @@ export default function CookieConsent() {
     (!consentGiven && (
       <div className={styles.banner} data-testid="cookieConsent">
         <p>{t('cookieConsent')}</p>
-        <button type="button" onClick={handleAccept}>
+        <Button variant="contained" onClick={handleAccept}>
           {t('accept')}
-        </button>
+        </Button>
       </div>
     )) ||
     null
