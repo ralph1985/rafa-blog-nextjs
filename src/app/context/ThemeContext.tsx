@@ -25,5 +25,3 @@ export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
 }
 
 export const useThemeContext = () => useContext(ThemeContext);
-
-// TODO: faltan los tests unitarios
