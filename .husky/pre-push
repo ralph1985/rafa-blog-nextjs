@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn test && yarn e2e:headless
+yarn test:coverage && yarn e2e:headless
