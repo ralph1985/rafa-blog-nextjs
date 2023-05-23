@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, within } from '@testing-library/react';
 import useTranslation from 'next-translate/useTranslation';
 import NavBar from './index';
 
@@ -61,6 +61,19 @@ Object.entries(navItems).forEach(([lang, { home, about }]) => {
       fireEvent.click(screen.getByTestId('hamburger'));
 
       expect(screen.getByRole('navigation')).not.toHaveClass('open');
+    });
+
+    test('should changes theme when theme switch is toggled', () => {
+      render(<NavBar />);
+
+      const labelElement = screen.getByTestId('switchTheme');
+      const themeSwitch = within(labelElement).getByRole('checkbox');
+
+      expect(themeSwitch).not.toBeChecked();
+
+      fireEvent.change(themeSwitch, { target: { checked: true } });
+
+      expect(themeSwitch).toBeChecked();
     });
   });
 });

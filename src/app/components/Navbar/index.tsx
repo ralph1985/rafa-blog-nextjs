@@ -60,7 +60,12 @@ export default function NavBar() {
               )
           )}
         </div>
-        <FormControlLabel control={<MaterialUISwitch sx={{ m: 1 }} checked={theme !== 'light'} />} label="" onChange={handleChangeTheme} />
+        <FormControlLabel
+          data-testid="switchTheme"
+          control={<MaterialUISwitch sx={{ m: 1 }} checked={theme === 'dark'} />}
+          label=""
+          onChange={handleChangeTheme}
+        />
       </nav>
       <Hamburger className={styles.hamburger} onChange={toggleVisibility} />
       {isVisible && (
