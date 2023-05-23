@@ -568,7 +568,7 @@
   resolved "https://descinet.bbva.es/artifactory/api/npm/npm/@emotion/memoize/-/memoize-0.8.1.tgz#c1ddb040429c6d21d38cc945fe75c818cfb68e17"
   integrity sha1-wd2wQEKcbSHTjMlF/nXIGM+2jhc=
 
-"@emotion/react@^11.11.0":
+"@emotion/react@11.11.0":
   version "11.11.0"
   resolved "https://descinet.bbva.es/artifactory/api/npm/npm/@emotion/react/-/react-11.11.0.tgz#408196b7ef8729d8ad08fc061b03b046d1460e02"
   integrity sha1-QIGWt++HKditCPwGGwOwRtFGDgI=
@@ -598,7 +598,7 @@
   resolved "https://descinet.bbva.es/artifactory/api/npm/npm/@emotion/sheet/-/sheet-1.2.2.tgz#d58e788ee27267a14342303e1abb3d508b6d0fec"
   integrity sha1-1Y54juJyZ6FDQjA+Grs9UIttD+w=
 
-"@emotion/styled@^11.11.0":
+"@emotion/styled@11.11.0":
   version "11.11.0"
   resolved "https://descinet.bbva.es/artifactory/api/npm/npm/@emotion/styled/-/styled-11.11.0.tgz#26b75e1b5a1b7a629d7c0a8b708fbf5a9cdce346"
   integrity sha1-JrdeG1obemKdfAqLcI+/Wpzc40Y=
@@ -975,7 +975,7 @@
   resolved "https://descinet.bbva.es/artifactory/api/npm/npm/@mui/core-downloads-tracker/-/core-downloads-tracker-5.13.2.tgz#8802f8fa81fff46e37245a59e1e547c692e11c06"
   integrity sha1-iAL4+oH/9G43JFpZ4eVHxpLhHAY=
 
-"@mui/material@^5.13.2":
+"@mui/material@5.13.2":
   version "5.13.2"
   resolved "https://descinet.bbva.es/artifactory/api/npm/npm/@mui/material/-/material-5.13.2.tgz#2cf36faf8a90a0971b3633cbf18b95c7c7ea555b"
   integrity sha1-LPNvr4qQoJcbNjPL8YuVx8fqVVs=
