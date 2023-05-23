@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import i18n from '../i18n';
+import i18n from '@i18n';
 
 const middleware = (request: NextRequest) => {
   const locale = request.nextUrl.locale || i18n.defaultLocale;
