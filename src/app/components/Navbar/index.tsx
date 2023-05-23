@@ -7,9 +7,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FormControlLabel, MaterialUISwitch } from '../MaterialUI/MaterialUISwitch';
 import { useThemeContext } from '../../context/ThemeContext'; // TODO: arreglar el tener que poner "../../" para que los tests de Jest pasen
-import Hamburger from '../Buttons/Hamburger/Hamburger'; // TODO: poner el "index" en los componentes para evitar repetir el nombre
+import Hamburger from '../Buttons/Hamburger';
 import { locales } from '../../../../i18n';
-import styles from './NavBar.module.scss';
+import styles from './index.module.scss';
 
 type NavItem = {
   label: string;

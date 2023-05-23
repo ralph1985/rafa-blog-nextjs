@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import useTranslation from 'next-translate/useTranslation';
-import NavBar from './NavBar';
+import NavBar from './index';
 
 jest.mock('next-translate/useTranslation', () => ({
   __esModule: true,

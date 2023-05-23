@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import styles from './Hamburger.module.scss';
+import styles from './index.module.scss';
 
 type HamburgerProps = {
   className: string;
