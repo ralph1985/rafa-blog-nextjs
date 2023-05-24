@@ -13,4 +13,7 @@ export const NAV_ITEMS = [
   },
 ];
 
-export const BORRAR = 'borrar'; // TODO: borrar cuando tengamos más constantes
+export const THEMES = {
+  light: 'light',
+  dark: 'dark',
+};

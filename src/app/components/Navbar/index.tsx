@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { FormControlLabel, MaterialUISwitch } from '@components/MaterialUI/MaterialUISwitch';
 import { useThemeContext } from '@context/ThemeContext';
 import Hamburger from '@components/Buttons/Hamburger';
-import { NAV_ITEMS } from '@constants/index';
+import { NAV_ITEMS, THEMES } from '@constants/index';
 import { locales } from '@i18n';
 import styles from './index.module.scss';
 
@@ -39,7 +39,7 @@ export default function NavBar() {
   }));
 
   const handleChangeTheme = (event: React.SyntheticEvent, checked: boolean) => {
-    setTheme(checked ? 'dark' : 'light');
+    setTheme(checked ? THEMES.dark : THEMES.light);
   };
 
   return (
