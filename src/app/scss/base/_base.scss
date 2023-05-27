@@ -1,7 +1,15 @@
+@use '../abstracts/variables';
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,400;1,400&display=swap');
 
 html,
 body {
   font-family: 'Source Code Pro', monospace;
   background-color: var(--primary-color);
+}
+
+#body {
+  margin: 0 auto;
+  max-width: variables.$desktop-screen;
+  position: relative;
 }
