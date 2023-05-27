@@ -20,8 +20,10 @@ type NavItem = {
 export default function NavBar() {
   const { theme, setTheme } = useThemeContext();
   const [isVisible, setIsVisible] = useState(false);
-  const toggleVisibility = () => {
-    setIsVisible(!isVisible);
+  const toggleVisibility = (timeout = 10) => {
+    setTimeout(() => {
+      setIsVisible(!isVisible);
+    }, timeout);
   };
 
   const { t, lang } = useTranslation('navbar');
@@ -47,7 +49,7 @@ export default function NavBar() {
       <nav className={`${styles.navbar} ${isVisible ? styles.open : ''}`}>
         <div>
           {defaultItems.map((item) => (
-            <Link key={item.href} href={item.href} onClick={toggleVisibility}>
+            <Link key={item.href} href={item.href} onClick={() => toggleVisibility(600)}>
               {item.label}
             </Link>
           ))}
@@ -67,9 +69,9 @@ export default function NavBar() {
           onChange={handleChangeTheme}
         />
       </nav>
-      <Hamburger className={styles.hamburger} onChange={toggleVisibility} />
+      <Hamburger className={styles.hamburger} onChange={() => toggleVisibility()} />
       {isVisible && (
-        <button type="button" className={styles.secondaryCloseNavBarButton} onClick={toggleVisibility}>
+        <button type="button" className={styles.secondaryCloseNavBarButton} onClick={() => toggleVisibility()}>
           {t('menu-close')}
         </button>
       )}
