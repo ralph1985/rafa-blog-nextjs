@@ -44,12 +44,21 @@ export default function NavBar() {
     setTheme(checked ? THEMES.dark : THEMES.light);
   };
 
+  function closeNavigationBarIfApplicable() {
+    const hamburger = document.querySelector(`.${styles.hamburger}`) as HTMLElement;
+    const { display } = window.getComputedStyle(hamburger);
+
+    if (display !== 'none') {
+      toggleVisibility(600);
+    }
+  }
+
   return (
     <>
-      <nav className={`${styles.navbar} ${isVisible ? styles.open : ''}`}>
+      <nav id="navbar" className={`${styles.navbar} ${isVisible ? styles.open : ''}`}>
         <div>
           {defaultItems.map((item) => (
-            <Link key={item.href} href={item.href} onClick={() => toggleVisibility(600)}>
+            <Link key={item.href} href={item.href} onClick={() => closeNavigationBarIfApplicable()}>
               {item.label}
             </Link>
           ))}
