@@ -11,5 +11,6 @@ body {
 #body {
   margin: 0 auto;
   max-width: variables.$desktop-screen;
+  min-width: 320px;
   position: relative;
 }
