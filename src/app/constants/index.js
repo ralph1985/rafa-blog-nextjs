@@ -8,6 +8,10 @@ export const NAV_ITEMS = [
     href: '__BASE_LANG__/about',
   },
   {
+    key: 'made-with',
+    href: '__BASE_LANG__/made-with',
+  },
+  {
     key: 'contact',
     href: '__BASE_LANG__/contact',
   },

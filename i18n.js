@@ -5,5 +5,7 @@ module.exports = {
     '*': ['common', 'navbar'],
     '/': ['home'],
     '/about': ['about'],
+    '/contact': ['contact'],
+    '/made-with': ['made-with'],
   },
 };
