@@ -12,17 +12,29 @@ import { NAV_ITEMS, THEMES } from '@constants/index';
 import { locales } from '@i18n';
 import styles from './index.module.scss';
 
+type NavbarProps = {
+  onClose: Function;
+  onOpen: Function;
+};
+
 type NavItem = {
   label: string;
   href: string;
 };
 
-export default function NavBar() {
+export default function NavBar(props: NavbarProps) {
+  const { onClose, onOpen } = props;
   const { theme, setTheme } = useThemeContext();
   const [isVisible, setIsVisible] = useState(false);
   const toggleVisibility = (timeout = 10) => {
     setTimeout(() => {
       setIsVisible(!isVisible);
+
+      if (isVisible) {
+        onClose();
+      } else {
+        onOpen();
+      }
     }, timeout);
   };
 

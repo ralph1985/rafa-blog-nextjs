@@ -1,5 +1,4 @@
 import useTranslation from 'next-translate/useTranslation';
-import CookieConsent from '../CookieConsent';
 import styles from './index.module.scss';
 
 export default function Footer() {
@@ -12,7 +11,6 @@ export default function Footer() {
         &copy;
         {year} Rafael García Prieto. {t('allRightsReserved')}
       </div>
-      <CookieConsent />
     </footer>
   );
 }

@@ -13,16 +13,17 @@
   bottom: 0;
   color: variables.$font-primary-color-dark;
   position: absolute;
+  z-index: 1;
 
   p {
-    margin: 4em 1em 2em;
+    margin: 3.6em 1em 2em;
   }
 
   button {
+    margin: 1em;
     position: absolute;
     right: 0;
     top: 0;
-    margin: 1em
   }
 }
 

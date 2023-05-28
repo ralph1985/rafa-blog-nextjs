@@ -14,15 +14,19 @@
   animation: menu-out variables.$menu-animation-duration;
   background-color: variables.$background-primary-color-light-transparent;
   backdrop-filter: blur(5px);
+  box-shadow: -.1em 0 1em #000;
   height: 100vh;
+  opacity: 0;
   position: absolute;
   top: 0;
-  transition: translate variables.$menu-animation-duration cubic-bezier(0.175, 0.885, 0.32, 1);
+  transition: opacity 1.5s, translate variables.$menu-animation-duration cubic-bezier(0.175, 0.885, 0.32, 1);
   translate: -100% 0;
   width: 12em;
+  z-index: 1;
 
   &.open {
     animation: menu-in variables.$menu-animation-duration;
+    opacity: 1;
     transition: translate variables.$menu-animation-duration cubic-bezier(0.175, 0.885, 0.32, 1);
     translate: 0;
 
@@ -94,6 +98,7 @@
 .hamburger {
   position: fixed;
   top: 0;
+  z-index: 1;
 }
 
 .secondaryCloseNavBarButton {
@@ -103,12 +108,14 @@
   right: 0;
   top: 0;
   width: calc(100% - 12em);
+  z-index: 1;
 }
 
 @media (min-width: variables.$mobile-screen) {
   .navbar {
     animation: none;
     height: inherit;
+    opacity: 1;
     position: inherit;
     translate: 0;
 

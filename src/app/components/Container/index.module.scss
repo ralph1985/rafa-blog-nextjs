@@ -1,0 +1,21 @@
+@use 'scss/abstracts/variables';
+
+.container {
+  box-shadow: 2em 0 3em #000;
+  flex-grow: 1;
+  transition: transform 0.8s ease 0s;
+
+  &.navbarOpened {
+    transform: translateX(20px) scale(0.95);
+  }
+}
+
+@media (min-width: variables.$mobile-screen) {
+  .container {
+    box-shadow: 0 0 3em #000;
+
+    &.navbarOpened {
+      transform: none;
+    }
+  }
+}
