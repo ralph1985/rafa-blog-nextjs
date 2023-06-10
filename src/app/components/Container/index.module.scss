@@ -19,3 +19,13 @@
     }
   }
 }
+
+[data-menu-position="right"] {
+  .container {
+    box-shadow: -1em 0 3em #000;
+
+    &.navbarOpened {
+      transform: translateX(-20px) scale(0.95);
+    }
+  }
+}
