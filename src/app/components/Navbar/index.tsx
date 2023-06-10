@@ -100,7 +100,7 @@ export default function NavBar(props: NavbarProps) {
           onChange={handleChangeMenuPosition}
         />
       </nav>
-      <Hamburger className={styles.hamburger} onChange={() => toggleVisibility()} />
+      <Hamburger className={styles.hamburger} checked={isVisible} onChange={() => toggleVisibility()} />
       {isVisible && (
         <button type="button" className={styles.secondaryCloseNavBarButton} onClick={() => toggleVisibility()}>
           {t('menu-close')}

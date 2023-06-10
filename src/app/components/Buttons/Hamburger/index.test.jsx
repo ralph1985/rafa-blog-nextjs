@@ -29,6 +29,7 @@ describe('Hamburger Component', () => {
     expect(checkboxElement).toBeChecked();
   });
 
+  // TODO: el test de abajo va a fallar porque ya no existe la propiedad isChecked (ni todas las relacionadas con isChecked)
   test('displays correct text based on isChecked state', () => {
     const { getByTestId } = render(<Hamburger className="test" onChange={() => {}} />);
     const textElement = getByTestId('hamburger').querySelector('span');
