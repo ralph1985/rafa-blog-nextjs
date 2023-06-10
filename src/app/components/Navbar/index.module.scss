@@ -160,13 +160,22 @@
     }
   }
 
-
   .hamburger {
     right: 4em;
   }
 
   .secondaryCloseNavBarButton {
     right: unset;
+  }
+}
+
+@media (min-width: variables.$mobile-screen) {
+  [data-menu-position="right"] {
+    .navbar {
+      animation: inherit;
+      right: 12em;
+      transition: opacity 1.5s, translate variables.$menu-animation-duration;
+    }
   }
 }
 
