@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { FormControlLabel, MaterialUISwitch } from '@components/MaterialUI/MaterialUISwitch';
 import { useThemeContext } from '@context/ThemeContext';
 import Hamburger from '@components/Buttons/Hamburger';
-import { NAV_ITEMS, THEMES } from '@constants/index';
+import { MENU_POSITION, NAV_ITEMS, THEMES } from '@constants/index';
 import { locales } from '@i18n';
 import styles from './index.module.scss';
 
@@ -24,7 +24,7 @@ type NavItem = {
 
 export default function NavBar(props: NavbarProps) {
   const { onClose, onOpen } = props;
-  const { theme, setTheme } = useThemeContext();
+  const { theme, setTheme, menuPosition, setMenuPosition } = useThemeContext();
   const [isVisible, setIsVisible] = useState(false);
   const toggleVisibility = (timeout = 10) => {
     setTimeout(() => {
@@ -55,6 +55,9 @@ export default function NavBar(props: NavbarProps) {
   const handleChangeTheme = (event: React.SyntheticEvent, checked: boolean) => {
     setTheme(checked ? THEMES.dark : THEMES.light);
   };
+  const handleChangeMenuPosition = (event: React.SyntheticEvent, checked: boolean) => {
+    setMenuPosition(checked ? MENU_POSITION.right : MENU_POSITION.left);
+  };
 
   function closeNavigationBarIfApplicable() {
     const hamburger = document.querySelector(`.${styles.hamburger}`) as HTMLElement;
@@ -83,11 +86,18 @@ export default function NavBar(props: NavbarProps) {
               )
           )}
         </div>
+        {/* TODO: falta establecer los "label" de los switch */}
         <FormControlLabel
           data-testid="switchTheme"
-          control={<MaterialUISwitch sx={{ m: 1 }} checked={theme === 'dark'} />}
+          control={<MaterialUISwitch sx={{ m: 1 }} icontype="theme" checked={theme === THEMES.dark} />}
           label=""
           onChange={handleChangeTheme}
+        />
+        <FormControlLabel
+          data-testid="switchPositionMenu"
+          control={<MaterialUISwitch sx={{ m: 1 }} icontype="position" checked={menuPosition === MENU_POSITION.right} />}
+          label=""
+          onChange={handleChangeMenuPosition}
         />
       </nav>
       <Hamburger className={styles.hamburger} onChange={() => toggleVisibility()} />

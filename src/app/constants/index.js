@@ -21,3 +21,8 @@ export const THEMES = {
   light: 'light',
   dark: 'dark',
 };
+
+export const MENU_POSITION = {
+  left: 'left',
+  right: 'right',
+};

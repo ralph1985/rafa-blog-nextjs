@@ -86,4 +86,6 @@ describe('ThemeContextProvider', () => {
 
     expect(result.current.theme).toBe('dark');
   });
+
+  // TODO: faltan los tests para el switch del cambio de posición del menú
 });
