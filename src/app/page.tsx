@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <section>
       <h1>{t('home')}</h1>
+      <div>Hola</div>
     </section>
   );
 }

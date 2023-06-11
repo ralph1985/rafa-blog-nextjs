@@ -31,6 +31,14 @@ export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
   };
 
   useEffect(() => {
+    if (theme === THEMES.dark) {
+      document.body.classList.add(THEMES.dark);
+    } else {
+      document.body.classList.remove(THEMES.dark);
+    }
+  }, [theme]);
+
+  useEffect(() => {
     const mediaQuery = window?.matchMedia?.('(prefers-color-scheme: dark)');
 
     setTheme(mediaQuery?.matches ? THEMES.dark : THEMES.light);

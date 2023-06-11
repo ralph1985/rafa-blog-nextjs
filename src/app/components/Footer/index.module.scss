@@ -1,3 +1,12 @@
+@use 'scss/abstracts/variables';
+
 .style {
-  background-color: gray;
+  background-color: variables.$background-primary-color-light;
+  display: flex;
+  min-height: 3em;
+  padding: 1em;
+
+  >div {
+    align-self: center;
+  }
 }

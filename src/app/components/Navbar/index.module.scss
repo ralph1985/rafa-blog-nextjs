@@ -1,15 +1,5 @@
 @use 'scss/abstracts/variables';
 
-[data-theme="dark"] {
-  .navbar {
-    background-color: variables.$background-primary-color-dark-transparent;
-
-    a {
-      color: variables.$font-primary-color-light
-    }
-  }
-}
-
 .navbar {
   animation: menu-out variables.$menu-animation-duration;
   background-color: variables.$background-primary-color-light-transparent;
@@ -114,28 +104,6 @@
   z-index: 1;
 }
 
-@media (min-width: variables.$mobile-screen) {
-  .navbar {
-    animation: none;
-    height: inherit;
-    opacity: 1;
-    position: inherit;
-    translate: 0;
-
-    >div {
-      margin-top: 1em;
-    }
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .secondaryCloseNavBarButton {
-    display: none;
-  }
-}
-
 [data-menu-position="right"] {
   .navbar {
     animation: menu-out-right variables.$menu-animation-duration;
@@ -169,12 +137,55 @@
   }
 }
 
+[data-theme="dark"] {
+  .navbar {
+    background-color: variables.$background-primary-color-dark-transparent;
+
+    a {
+      color: variables.$font-primary-color-light
+    }
+  }
+}
+
 @media (min-width: variables.$mobile-screen) {
+  .navbar {
+    animation: none;
+    background-color: variables.$background-primary-color-light;
+    backdrop-filter: initial;
+    box-shadow: initial;
+    height: inherit;
+    opacity: 1;
+    position: inherit;
+    translate: 0;
+
+    >div {
+      margin-top: 1em;
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .secondaryCloseNavBarButton {
+    display: none;
+  }
+
+  [data-theme="dark"] {
+    .navbar {
+      background-color: variables.$background-primary-color-dark;
+    }
+  }
+
   [data-menu-position="right"] {
     .navbar {
       animation: inherit;
       right: 12em;
       transition: opacity 1.5s, translate variables.$menu-animation-duration;
+
+      &.open {
+        translate: 100% 0;
+      }
     }
   }
 }

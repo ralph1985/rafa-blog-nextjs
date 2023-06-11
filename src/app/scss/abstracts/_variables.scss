@@ -1,29 +1,37 @@
 // @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,400;1,400&display=swap');
 
+// TODO: eliminar
 // :root {
 //   // fonts
 //   --font-source-code-pro: 'Source Code Pro', monospace;
 
-//   // colors
-//   --primary-color: #64ff00;
 // }
 
-$background-primary-color-light: #0000ff;
-$background-primary-color-light-transparent: #0000ffaa;
-$background-secondary-color-light: #ffa500;
-$background-secondary-color-light-transparent: #ffa500aa;
-$background-tertiary-color-light: #008000;
-$background-tertiary-color-light-transparent: #008000aa;
 
-$background-primary-color-dark: #000080;
-$background-primary-color-dark-transparent: #000080cc;
-$background-secondary-color-dark: #FF8C00;
-$background-secondary-color-dark-transparent: #FF8C00aa;
-$background-tertiary-color-dark: #006400;
-$background-tertiary-color-dark-transparent: #006400aa;
+// https://colorhunt.co/palette/f1f6f9394867212a3e9ba4b5
 
-$font-primary-color-light: #f9f9f9;
-$font-primary-color-dark: #212121;
+$background-color-body-light: #F1F6F9;
+$background-color-body-dark: #F1F6F9;
+
+$background-color-cookies-light-transparent: #9BA4B5aa;
+$background-color-cookies-dark-transparent: #9BA4B5aa;
+
+$background-primary-color-light: #394867;
+$background-primary-color-light-transparent: #394867aa;
+$background-secondary-color-light: #295F4E;
+$background-secondary-color-light-transparent: #295F4Eaa;
+$background-tertiary-color-light: #6DB193;
+$background-tertiary-color-light-transparent: #6DB193aa;
+
+$background-primary-color-dark: #394867;
+$background-primary-color-dark-transparent: #394867cc;
+$background-secondary-color-dark: #295F4E;
+$background-secondary-color-dark-transparent: #295F4Eaa;
+$background-tertiary-color-dark: #6DB193;
+$background-tertiary-color-dark-transparent: #6DB193aa;
+
+$font-primary-color-light: #ffff;
+$font-primary-color-dark: #ffff;
 
 $desktop-screen: 900px;
 $mobile-screen: 600px;

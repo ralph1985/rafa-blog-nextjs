@@ -11,7 +11,11 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  margin: 0 auto;
+  max-width: variables.$desktop-screen;
+  min-width: 320px;
   overflow-x: hidden;
+  position: relative;
   width: 100%;
 }
 
@@ -24,15 +28,7 @@ main {
   flex-grow: 1;
 }
 
-:root {
-  --primary-color: #64ff00;
-}
-
 @media (min-width: variables.$mobile-screen) {
-  :root {
-    --primary-color: blue;
-  }
-
   #body {
     flex-direction: row;
   }
@@ -43,14 +39,15 @@ main {
 }
 
 @media (min-width: variables.$desktop-screen) {
-  :root {
-    --primary-color: pink;
-  }
-
   #body {
+    box-shadow: 0 0 .5em #000;
     height: calc(100vh - 2em);
     margin-bottom: 1em;
     margin-top: 1em;
     overflow-x: inherit;
+  }
+
+  #body[data-menu-position="right"] {
+    flex-direction: row-reverse;
   }
 }

@@ -10,22 +10,32 @@
   }
 }
 
+[data-menu-position="right"] {
+  .container {
+    box-shadow: 0em 0 3em #000;
+
+    &.navbarOpened {
+      transform: translateX(-20px) scale(0.95);
+    }
+  }
+}
+
 @media (min-width: variables.$mobile-screen) {
   .container {
-    box-shadow: 0 0 3em #000;
+    box-shadow: initial;
 
     &.navbarOpened {
       transform: none;
     }
   }
-}
 
-[data-menu-position="right"] {
-  .container {
-    box-shadow: -1em 0 3em #000;
+  [data-menu-position="right"] {
+    .container {
+      box-shadow: initial;
 
-    &.navbarOpened {
-      transform: translateX(-20px) scale(0.95);
+      &.navbarOpened {
+        transform: none;
+      }
     }
   }
 }
