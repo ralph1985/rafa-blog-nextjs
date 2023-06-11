@@ -1,12 +1,27 @@
 @use 'scss/abstracts/variables';
 
 .style {
-  background-color: variables.$background-primary-color-light;
+  background-color: variables.$background-color-primary-light;
+  color: variables.$font-color-primary-light;
   display: flex;
-  min-height: 3em;
-  padding: 1em;
+  min-height: 2em;
+  padding: 1em 1em 1em 3.8em;
 
-  >div {
+  h1 {
     align-self: center;
+    font-size: 1em;
+    margin: 0;
+  }
+}
+
+[data-theme="dark"] {
+  .style {
+    // color: variables.$font-color-primary-dark;
+  }
+}
+
+@media (min-width: variables.$mobile-screen) {
+  .style {
+    padding: 1em;
   }
 }

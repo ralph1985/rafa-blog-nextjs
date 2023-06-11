@@ -4,8 +4,8 @@ export default function AboutPage() {
   const { t } = useTranslation('made-with');
 
   return (
-    <section>
-      <h1>{t('made-with')}</h1>
+    <section className="page">
+      <h2>{t('made-with')}</h2>
       <div>
         <a href="https://github.com/ralph1985/rafa-blog-nextjs" target="_blank">
           {t('repository')}

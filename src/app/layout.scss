@@ -28,6 +28,15 @@ main {
   flex-grow: 1;
 }
 
+.page {
+  background-color: red;
+
+  h2,
+  p {
+    margin: 0;
+  }
+}
+
 @media (min-width: variables.$mobile-screen) {
   #body {
     flex-direction: row;

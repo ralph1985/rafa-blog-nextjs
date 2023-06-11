@@ -2,7 +2,7 @@
 
 .navbar {
   animation: menu-out variables.$menu-animation-duration;
-  background-color: variables.$background-primary-color-light-transparent;
+  background-color: variables.$background-color-primary-light-transparent;
   backdrop-filter: blur(5px);
   box-shadow: -.1em 0 1em #000;
   height: 100vh;
@@ -39,7 +39,7 @@
 
     a {
       position: relative;
-      color: variables.$font-primary-color-dark;
+      color: variables.$font-color-primary-light;
       text-decoration: none;
       font-size: 1em;
       padding: .6em 0;
@@ -139,10 +139,10 @@
 
 [data-theme="dark"] {
   .navbar {
-    background-color: variables.$background-primary-color-dark-transparent;
+    background-color: variables.$background-color-primary-dark-transparent;
 
     a {
-      color: variables.$font-primary-color-light
+      // color: variables.$font-color-primary-dark
     }
   }
 }
@@ -150,7 +150,7 @@
 @media (min-width: variables.$mobile-screen) {
   .navbar {
     animation: none;
-    background-color: variables.$background-primary-color-light;
+    background-color: variables.$background-color-primary-light;
     backdrop-filter: initial;
     box-shadow: initial;
     height: inherit;
@@ -173,7 +173,7 @@
 
   [data-theme="dark"] {
     .navbar {
-      background-color: variables.$background-primary-color-dark;
+      background-color: variables.$background-color-primary-dark;
     }
   }
 

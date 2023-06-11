@@ -4,10 +4,13 @@ export default function ContactPage() {
   const { t } = useTranslation('contact');
 
   return (
-    <section>
-      <h1>{t('contact')}</h1>
-      <input />
-      <textarea />
+    <section className="page">
+      <h2>{t('contact')}</h2>
+      <div>
+        <input />
+        <br />
+        <textarea />
+      </div>
     </section>
   );
 }

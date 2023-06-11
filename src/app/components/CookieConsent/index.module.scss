@@ -4,7 +4,7 @@
   animation: appear variables.$cookies-animation-duration backwards;
   background-color: variables.$background-color-cookies-light-transparent;
   bottom: 0;
-  color: variables.$font-primary-color-dark;
+  color: variables.$font-color-primary-dark;
   position: absolute;
   z-index: 1;
 
@@ -22,8 +22,8 @@
 
 [data-theme="dark"] {
   .banner {
-    background-color: variables.$background-secondary-color-dark-transparent;
-    color: variables.$font-primary-color-light;
+    background-color: variables.$background-color-cookies-dark-transparent;
+    color: variables.$font-color-primary-light;
   }
 }
 

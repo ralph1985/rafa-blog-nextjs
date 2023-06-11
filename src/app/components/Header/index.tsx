@@ -3,7 +3,7 @@ import styles from './index.module.scss';
 export default function Header() {
   return (
     <header className={styles.style}>
-      <div>Header</div>
+      <h1>Header</h1>
     </header>
   );
 }

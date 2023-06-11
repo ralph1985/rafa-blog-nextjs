@@ -4,9 +4,11 @@ export default function Home() {
   const { t } = useTranslation('home');
 
   return (
-    <section>
-      <h1>{t('home')}</h1>
-      <div>Hola</div>
+    <section className="page">
+      <h2>{t('home')}</h2>
+      <div>
+        <p>Hola</p>
+      </div>
     </section>
   );
 }

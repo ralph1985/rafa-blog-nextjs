@@ -4,34 +4,38 @@
 // :root {
 //   // fonts
 //   --font-source-code-pro: 'Source Code Pro', monospace;
-
 // }
 
 
 // https://colorhunt.co/palette/f1f6f9394867212a3e9ba4b5
+// https://colorhunt.co/palette/27374d526d829db2bfdde6ed
 
 $background-color-body-light: #F1F6F9;
 $background-color-body-dark: #F1F6F9;
 
 $background-color-cookies-light-transparent: #9BA4B5aa;
-$background-color-cookies-dark-transparent: #9BA4B5aa;
+$background-color-cookies-dark-transparent: #526D82aa;
 
-$background-primary-color-light: #394867;
-$background-primary-color-light-transparent: #394867aa;
-$background-secondary-color-light: #295F4E;
-$background-secondary-color-light-transparent: #295F4Eaa;
+$background-color-primary-light: #394867;
+$background-color-primary-dark: #394867;
+
+$background-color-primary-light-transparent: #394867aa;
+$background-color-primary-dark-transparent: #394867cc;
+
+$background-color-secondary-light: #295F4E;
+$background-color-secondary-dark: #295F4E;
+
+$background-color-secondary-light-transparent: #295F4Eaa;
+$background-color-secondary-dark-transparent: #295F4Eaa;
+
 $background-tertiary-color-light: #6DB193;
-$background-tertiary-color-light-transparent: #6DB193aa;
-
-$background-primary-color-dark: #394867;
-$background-primary-color-dark-transparent: #394867cc;
-$background-secondary-color-dark: #295F4E;
-$background-secondary-color-dark-transparent: #295F4Eaa;
 $background-tertiary-color-dark: #6DB193;
+
+$background-tertiary-color-light-transparent: #6DB193aa;
 $background-tertiary-color-dark-transparent: #6DB193aa;
 
-$font-primary-color-light: #ffff;
-$font-primary-color-dark: #ffff;
+$font-color-primary-light: #F1F6F9;
+$font-color-primary-dark: #212A3E;
 
 $desktop-screen: 900px;
 $mobile-screen: 600px;
