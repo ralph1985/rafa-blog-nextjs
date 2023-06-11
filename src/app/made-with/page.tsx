@@ -6,6 +6,11 @@ export default function AboutPage() {
   return (
     <section>
       <h1>{t('made-with')}</h1>
+      <div>
+        <a href="https://github.com/ralph1985/rafa-blog-nextjs" target="_blank">
+          {t('repository')}
+        </a>
+      </div>
     </section>
   );
 }
