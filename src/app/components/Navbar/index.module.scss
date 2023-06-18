@@ -5,7 +5,7 @@
   background-color: variables.$background-color-primary-light-transparent;
   backdrop-filter: blur(5px);
   box-shadow: -.1em 0 1em #000;
-  height: 100vh;
+  height: 100%;
   opacity: 0;
   position: absolute;
   top: 0;
@@ -95,7 +95,7 @@
 }
 
 .secondaryCloseNavBarButton {
-  height: 100vh;
+  height: 100%;
   opacity: 0;
   position: fixed;
   right: 0;
