@@ -70,36 +70,38 @@ export default function NavBar(props: NavbarProps) {
 
   return (
     <>
-      <nav id="navbar" className={`${styles.navbar} ${isVisible ? styles.open : ''}`}>
-        <div>
-          {defaultItems.map((item) => (
-            <Link key={item.href} href={item.href} onClick={() => closeNavigationBarIfApplicable()}>
-              {item.label}
-            </Link>
-          ))}
-          {locales.map(
-            (locale) =>
-              lang !== locale && (
-                <a key={locale} href={`/${locale}`.concat(pathnameWithoutLang)}>
-                  <Image src={`/flags/${locale}.svg`} alt={t(`flag-${locale}`)} width={25} height={25} />
-                </a>
-              )
-          )}
-        </div>
-        {/* TODO: falta establecer los "label" de los switch */}
-        <FormControlLabel
-          data-testid="switchTheme"
-          control={<MaterialUISwitch sx={{ m: 1 }} icontype="theme" checked={theme === THEMES.dark} />}
-          label=""
-          onChange={handleChangeTheme}
-        />
-        <FormControlLabel
-          data-testid="switchPositionMenu"
-          control={<MaterialUISwitch sx={{ m: 1 }} icontype="position" checked={menuPosition === MENU_POSITION.right} />}
-          label=""
-          onChange={handleChangeMenuPosition}
-        />
-      </nav>
+      <aside>
+        <nav id="navbar" className={`${styles.navbar} ${isVisible ? styles.open : ''}`}>
+          <div>
+            {defaultItems.map((item) => (
+              <Link key={item.href} href={item.href} onClick={() => closeNavigationBarIfApplicable()}>
+                {item.label}
+              </Link>
+            ))}
+            {locales.map(
+              (locale) =>
+                lang !== locale && (
+                  <a key={locale} href={`/${locale}`.concat(pathnameWithoutLang)}>
+                    <Image src={`/flags/${locale}.svg`} alt={t(`flag-${locale}`)} width={25} height={25} />
+                  </a>
+                )
+            )}
+          </div>
+          {/* TODO: falta establecer los "label" de los switch */}
+          <FormControlLabel
+            data-testid="switchTheme"
+            control={<MaterialUISwitch sx={{ m: 1 }} icontype="theme" checked={theme === THEMES.dark} />}
+            label=""
+            onChange={handleChangeTheme}
+          />
+          <FormControlLabel
+            data-testid="switchPositionMenu"
+            control={<MaterialUISwitch sx={{ m: 1 }} icontype="position" checked={menuPosition === MENU_POSITION.right} />}
+            label=""
+            onChange={handleChangeMenuPosition}
+          />
+        </nav>
+      </aside>
       <Hamburger className={styles.hamburger} checked={isVisible} onChange={() => toggleVisibility()} />
       {isVisible && (
         <button type="button" className={styles.secondaryCloseNavBarButton} onClick={() => toggleVisibility()}>
