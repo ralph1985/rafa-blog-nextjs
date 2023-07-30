@@ -1,7 +1,6 @@
 export type SkillProps = {
   id: string;
   name: string;
-  labelId: string;
 };
 
 export default class Skill {

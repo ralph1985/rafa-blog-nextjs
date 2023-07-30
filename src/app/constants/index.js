@@ -12,6 +12,10 @@ export const NAV_ITEMS = [
     href: '__BASE_LANG__/job-experience',
   },
   {
+    key: 'skills',
+    href: '__BASE_LANG__/skills',
+  },
+  {
     key: 'made-with',
     href: '__BASE_LANG__/made-with',
   },

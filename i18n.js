@@ -8,5 +8,6 @@ module.exports = {
     '/contact': ['contact'],
     '/job-experience': ['job-experience'],
     '/made-with': ['made-with'],
+    '/skills': ['skills'],
   },
 };
