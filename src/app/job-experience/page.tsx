@@ -1,15 +1,15 @@
 import useTranslation from 'next-translate/useTranslation';
-import { QueryDocumentSnapshot, DocumentData } from 'firebase/firestore';
-import getAllDocsFromCollection from '../../firebase/getAllDocsFromCollection';
+import { JobProps } from 'models/Job';
+import DB from 'db';
 
 export default async function JobExperiencePage() {
   const { t } = useTranslation('job-experience');
-  let collections: QueryDocumentSnapshot<DocumentData, DocumentData>[] = [];
+  let jobs: JobProps[] = [];
 
   try {
-    collections = await getAllDocsFromCollection('jobs');
+    jobs = await DB.getJobs();
   } catch (e) {
-    console.error(); // TODO: hacer gestión de errores (Bugsnag o similar)
+    console.error(e); // TODO: hacer gestión de errores (Bugsnag o similar)
   }
 
   return (
@@ -17,8 +17,10 @@ export default async function JobExperiencePage() {
       <h2>{t('job-experience')}</h2>
       <div>ASDF</div>
       <ul>
-        {collections.map(({ id }) => (
-          <li key={id}>{id}</li>
+        {jobs.map(({ id, name }) => (
+          <li key={id}>
+            {id} - {name}
+          </li>
         ))}
       </ul>
     </section>

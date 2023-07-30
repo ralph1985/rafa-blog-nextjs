@@ -1,7 +1,6 @@
 export type JobProps = {
   id: string;
   name: string;
-  labelId: string;
 };
 
 export default class Job {
