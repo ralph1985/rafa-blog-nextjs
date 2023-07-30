@@ -6,6 +6,7 @@ module.exports = {
     '/': ['home'],
     '/about': ['about'],
     '/contact': ['contact'],
+    '/job-experience': ['job-experience'],
     '/made-with': ['made-with'],
   },
 };
