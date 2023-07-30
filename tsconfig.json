@@ -25,6 +25,7 @@
       "@components/*": ["components/*"],
       "@context/*": ["context/*"],
       "@constants/*": ["constants/*"],
+      "@hooks/*": ["hooks/*"],
       "@i18n": ["../../i18n.js"]
     }
   },
