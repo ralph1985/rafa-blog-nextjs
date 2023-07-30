@@ -1,0 +1,35 @@
+@use './scss/abstracts/variables';
+
+.card {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  // max-width: 300px;
+  padding: 1em;
+  margin: 2em;
+  // width: 75vw;
+  text-align: center;
+}
+
+.img {
+  aspect-ratio: 1;
+  border-radius: inherit;
+  height: 20%;
+  object-fit: cover;
+  margin-top: -3em;
+  width: 60%;
+}
+
+@media (min-width: variables.$mobile-screen) {
+  .card {
+    flex-direction: row;
+  }
+
+  .img {
+    aspect-ratio: 3/4;
+    margin-left: -2em;
+    margin-top: 0;
+  }
+}
