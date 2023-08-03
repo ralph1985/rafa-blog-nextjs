@@ -1,6 +1,7 @@
 import Job from 'models/Job';
 import Skill from 'models/Skill';
 import { FirebaseError } from '@firebase/util';
+import * as Sentry from '@sentry/nextjs';
 import Firebase, { FIREBASE_METHODS } from '../databases/Firebase';
 
 const { GET_ALL_DOCS_FROM_COLLECTION } = FIREBASE_METHODS;
@@ -24,27 +25,29 @@ const firebaseAllowedMethods = {
 };
 const errorHandler = (e: unknown) => {
   if (e instanceof FirebaseError) {
-    // TODO: trazar error (Bugsnag)
+    Sentry.captureException(e); // TODO: ¿nos quedamos con esta solución?
+
     return new DatabaseError(e.code, e.name);
   }
 
   // TODO: trazar error unknown
+  Sentry.captureException(e);
 
   return e;
 };
 const getData = async (method: keyof typeof firebaseAllowedMethods, collection: string) => {
   let data;
+  let hasError = false;
+  let error;
 
   try {
     data = await firebaseAllowedMethods[method](collection);
   } catch (e: unknown) {
-    return {
-      hasError: true,
-      error: errorHandler(e),
-    };
+    hasError = true;
+    error = errorHandler(e);
   }
 
-  return { data, hasError: false };
+  return { data, hasError, error };
 };
 
 const methods = {
