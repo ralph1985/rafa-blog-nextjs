@@ -1,28 +1,25 @@
 import useTranslation from 'next-translate/useTranslation';
-import { JobProps } from 'models/Job';
-import DB from 'db';
+import ErrorMessage from '@components/Notifications/ErrorMessage';
+import DB, { DatabaseError } from 'db';
 
 export default async function JobExperiencePage() {
   const { t } = useTranslation('job-experience');
-  let jobs: JobProps[] = [];
 
-  try {
-    jobs = await DB.getJobs();
-  } catch (e) {
-    console.error(e); // TODO: hacer gestión de errores (Bugsnag o similar)
-  }
+  const { jobs, hasError, error } = await DB.getJobs();
 
   return (
     <section className="page">
       <h2>{t('job-experience')}</h2>
       <div>ASDF</div>
-      <ul>
-        {jobs.map(({ id, name }) => (
-          <li key={id}>
-            {id} - {name}
-          </li>
-        ))}
-      </ul>
+      {(hasError && error instanceof DatabaseError && <ErrorMessage message={error.message} title={error.title} />) || (
+        <ul>
+          {jobs.map(({ id, name }) => (
+            <li key={id}>
+              {id} - {name}
+            </li>
+          ))}
+        </ul>
+      )}
     </section>
   );
 }
