@@ -1,7 +1,7 @@
-import Job from 'models/Job';
-import Skill from 'models/Skill';
 import { FirebaseError } from '@firebase/util';
 import * as Sentry from '@sentry/nextjs';
+import Job from 'models/Job';
+import Skill from 'models/Skill';
 import Firebase, { FIREBASE_METHODS } from '../databases/Firebase';
 
 const { GET_ALL_DOCS_FROM_COLLECTION } = FIREBASE_METHODS;
