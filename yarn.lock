@@ -1877,10 +1877,10 @@
     localforage "^1.8.1"
     tslib "^2.4.1 || ^1.9.3"
 
-"@sentry/nextjs@^7.61.0":
+"@sentry/nextjs@7.61.0":
   version "7.61.0"
-  resolved "https://descinet.bbva.es/artifactory/api/npm/npm/@sentry/nextjs/-/nextjs-7.61.0.tgz#5a30faa6fb04d9148853edbb5c148dd522126097"
-  integrity sha1-WjD6pvsE2RSIU+27XBSN1SISYJc=
+  resolved "https://registry.yarnpkg.com/@sentry/nextjs/-/nextjs-7.61.0.tgz#5a30faa6fb04d9148853edbb5c148dd522126097"
+  integrity sha512-zSEcAITqVmJpR4hhah1jUyCzm/hjlq9vjmO6BmTnQjr84OgOdeKJGWtRdktXId+9zzHdCOehs/JPtmO7y+yG6Q==
   dependencies:
     "@rollup/plugin-commonjs" "24.0.0"
     "@sentry/core" "7.61.0"
