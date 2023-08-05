@@ -1846,7 +1846,7 @@
     "@sentry/utils" "7.61.0"
     tslib "^2.4.1 || ^1.9.3"
 
-"@sentry/cli@^1.74.6":
+"@sentry/cli@^1.52.3", "@sentry/cli@^1.74.6":
   version "1.75.2"
   resolved "https://descinet.bbva.es/artifactory/api/npm/npm/@sentry/cli/-/cli-1.75.2.tgz#2c38647b38300e52c9839612d42b7c23f8d6455b"
   integrity sha1-LDhkezgwDlLJg5YS1Ct8I/jWRVs=
@@ -1876,6 +1876,13 @@
     "@sentry/utils" "7.61.0"
     localforage "^1.8.1"
     tslib "^2.4.1 || ^1.9.3"
+
+"@sentry/netlify-build-plugin@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@sentry/netlify-build-plugin/-/netlify-build-plugin-1.1.1.tgz#c3681b7e688b62c3fd6283b6bd1a291900949a58"
+  integrity sha512-VBMw/sFnRhwvA3p0f3yW3mgnuYIPmoMkaMiwMl/2SptKr7fDqtwMDBsH+LKx2biffFuigSpW+7nV2+L/yEhUmw==
+  dependencies:
+    "@sentry/cli" "^1.52.3"
 
 "@sentry/nextjs@7.61.0":
   version "7.61.0"
