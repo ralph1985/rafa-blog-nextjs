@@ -1,5 +1,4 @@
 import { FirebaseError } from '@firebase/util';
-import * as Sentry from '@sentry/nextjs';
 import Job from 'models/Job';
 import Skill from 'models/Skill';
 import Firebase, { FIREBASE_METHODS } from '../databases/Firebase';
@@ -25,13 +24,12 @@ const firebaseAllowedMethods = {
 };
 const errorHandler = (e: unknown) => {
   if (e instanceof FirebaseError) {
-    Sentry.captureException(e); // TODO: ¿nos quedamos con esta solución?
+    // TODO: probar con bugsnag
 
     return new DatabaseError(e.code, e.name);
   }
 
-  // TODO: trazar error unknown
-  Sentry.captureException(e);
+  // TODO: trazar error unknown (Bugsnag)
 
   return e;
 };

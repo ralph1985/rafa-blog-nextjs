@@ -1,7 +1,0 @@
-[[plugins]]
-  package = "@sentry/netlify-build-plugin"
-
-  [plugins.inputs]
-    sentryOrg = "rafa-yi"
-    sentryProject = "javascript-nextjs"
-    sentryRepository = "ralph1985/rafa-blog-nextjs"
